@@ -734,7 +734,7 @@ namespace GPO
 #region Get-Type (helper function for creating generic types)
 function Get-Type
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     param (
         [Parameter(Position = 0, Mandatory = $true)]
         [string] $GenericType,
@@ -760,7 +760,7 @@ function Get-Type
 #region Invoke-Ternary
 function Invoke-Ternary 
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     param
     (
         [scriptblock]
@@ -788,7 +788,7 @@ Set-Alias -Name ?? -Value Invoke-Ternary -Option AllScope -Description "Ternary 
 #region Test-IsAdministrator
 function Test-IsAdministrator
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     param ()
     
     $currentUser = [Security.Principal.WindowsIdentity]::GetCurrent()
@@ -799,7 +799,7 @@ function Test-IsAdministrator
 #region Get-LabHyperVAvailableMemory
 function Get-LabHyperVAvailableMemory
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [int](((Get-WmiObject -Namespace Root\Cimv2 -Class win32_operatingsystem).TotalVisibleMemorySize) / 1kb)
 }
 #endregion Get-LabHyperVAvailableMemory
@@ -807,7 +807,7 @@ function Get-LabHyperVAvailableMemory
 #region Write-ProgressIndicator
 function Write-ProgressIndicator
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     Write-ScreenInfo -Message '.' -NoNewline
 }
 #endregion Write-ProgressIndicator
@@ -815,7 +815,7 @@ function Write-ProgressIndicator
 #region Write-ProgressIndicatorEnd
 function Write-ProgressIndicatorEnd
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     Write-ScreenInfo -Message '.'
 }
 #endregion Write-ProgressIndicatorEnd
@@ -823,7 +823,7 @@ function Write-ProgressIndicatorEnd
 #region Reset-AutomatedLab
 function Reset-AutomatedLab
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     Remove-Lab
     Remove-Module *
 }
@@ -832,7 +832,7 @@ function Reset-AutomatedLab
 #region Write-ScreenInfo
 function Write-ScreenInfo
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     param
     (
         [Parameter(Mandatory, Position = 1)]
@@ -963,7 +963,7 @@ function Write-ScreenInfo
 #region Save-Hashes
 function Save-Hashes
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [cmdletbinding()]
     param
     (
@@ -992,7 +992,7 @@ function Save-Hashes
 #region Test-FileHashes
 function Test-FileHashes
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [cmdletbinding()]
     param
     (
@@ -1028,7 +1028,7 @@ function Test-FileHashes
 #region Save-FileList
 function Save-FileList
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [cmdletbinding()]
     param
     (
@@ -1042,7 +1042,7 @@ function Save-FileList
 #region Test-FileList
 function Test-FileList
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [cmdletbinding()]
     param
     (
@@ -1066,7 +1066,7 @@ function Test-FileList
 #region Test-FolderExist
 function Test-FolderExist
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [cmdletbinding()]
     param
     (
@@ -1083,7 +1083,7 @@ function Test-FolderExist
 #region Test-FolderNotExist
 function Test-FolderNotExist
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [cmdletbinding()]
     param
     (
@@ -1100,7 +1100,7 @@ function Test-FolderNotExist
 #region Restart-ServiceResilient
 function Restart-ServiceResilient
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [cmdletbinding()]
     param
     (
@@ -1270,7 +1270,7 @@ function Restart-ServiceResilient
 #region Remove-DeploymentFiles
 function Remove-DeploymentFiles
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     Invoke-LabCommand -ComputerName (Get-LabMachine) -ActivityName 'Remove deployment files (files used during deployment)' -AsJob -NoDisplay -ScriptBlock `
     {
         Remove-Item -Path c:\unattend.xml
@@ -1283,7 +1283,7 @@ function Remove-DeploymentFiles
 #region Enable-LabVMFirewallGroup
 function Enable-LabVMFirewallGroup
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [cmdletbinding()]
     param
     (
@@ -1321,7 +1321,7 @@ function Enable-LabVMFirewallGroup
 #region Disable-LabVMFirewallGroup
 function Disable-LabVMFirewallGroup
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [cmdletbinding()]
     param
     (
@@ -1359,7 +1359,7 @@ function Disable-LabVMFirewallGroup
 #region Test-Port
 function Test-Port
 {  
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [cmdletbinding()]
 
     Param(  
@@ -1495,7 +1495,7 @@ function Test-Port
 #region Get-StringSection
 function Get-StringSection
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     param(
         [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
         [string]$String,
@@ -1516,7 +1516,7 @@ function Get-StringSection
 #region Add-StringIncrement
 function Add-StringIncrement
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     param(
         [Parameter(Mandatory = $true)]
         [string]$String
@@ -1618,7 +1618,7 @@ $meshType = @"
 "@
 function Get-FullMesh
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     param(
         [Parameter(Mandatory = $true)]
         [ValidateNotNullOrEmpty()]
@@ -1656,22 +1656,32 @@ function Get-FullMesh
 #region Get-LabInternetFile
 function Get-LabInternetFile
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     param(
-        [Parameter(Mandatory)]
+        [Parameter(Mandatory = $true)]
         [string]$Uri,
 
-        [Parameter(Mandatory)]
-        $Path,
+        [Parameter(Mandatory = $true)]
+        [string]$Path,
 
-        [switch]$Force
+        [switch]$Force,
+        
+        [switch]$PassThru
     )
     
-    Write-LogFunctionEntry
+    $start = Get-Date
+    
+    $internalUri = New-Object System.Uri($Uri)
+    $fileName = $internalUri.Segments[$internalUri.Segments.Count - 1]
+    
+    if (Test-Path -Path $Path -PathType Container)
+    {
+        $Path = Join-Path -Path $Path -ChildPath $fileName
+    }
 
     if ((Test-Path -Path $Path) -and -not $Force)
     {
-        Write-Error "The file '$Path' does already exist"
+        Write-ScreenInfo "The file '$Path' does already exist, skipping the download" -Type Warning
         return
     }
 
@@ -1680,56 +1690,66 @@ function Get-LabInternetFile
         Remove-Item -Path $Path -Force
     }
     
-    $internalUri = New-Object System.Uri($Uri)
-    $fileName = $internalUri.Segments[$internalUri.Segments.Count - 1]
+    Write-Verbose "Uri is '$Uri'"
+    Write-Verbose "Path os '$Path'"
 
     try
     {
-        $start = Get-Date
+        $bytesProcessed = 0
+        $request = [System.Net.WebRequest]::Create($Uri)
         
-        #Determine length of the file to download
-        $webclient = New-Object System.Net.WebClient
-        $webclient.OpenRead($internalUri) | Out-Null
-        $fileLength = $webclient.ResponseHeaders['Content-Length']
-        Write-Verbose ("File Size of '{0}' is {1:N2}MB" -f $fileName, $fileLength)
-        $webclient.Dispose()
-        
-        Write-Verbose 'Starting download'
-        $job = Start-Job -Name "File Download" -ScriptBlock {
-            $webclient = New-Object System.Net.WebClient
-            $webclient.DownloadFile($args[0], $args[1])
-            $webclient.Dispose()
-        } -ArgumentList $internalUri, $Path
-        
-        Start-Sleep -Milliseconds 500 #to allow the WebClient create the file
-        
-        Write-Verbose 'Entering wait loop'
-        do
+        if ($request)
         {
-            $currentLength = (Get-Item -Path $Path).Length
-            $percentageCompleted = $currentLength / $fileLength
-            Write-Progress -Activity "Downloading file '$fileName'" `
-            -Status ("{0:P} completed, {1:N2}MB of {2:N2}MB" -f $percentageCompleted, ($currentLength / 1MB), ($fileLength / 1MB)) `
-            -PercentComplete ($percentageCompleted * 100)
-            
-            Start-Sleep -Milliseconds 200
-        } while ((Get-Item -Path $Path).Length -lt $fileLength)
-        Write-Verbose 'Wait loop finished'
-        
-        $result = $job | Receive-Job
-        
-        $end = Get-Date
-        Write-Verbose "Web Client Sync: $($end - $start)"
-
-        New-Object PSObject -Property @{
-            Uri = $Uri
-            Path = $Path
-            Length = $fileLength
+            Write-Verbose 'WebRequest created'
+            $response = $request.GetResponse()
+            if ($response)
+            {
+                Write-Verbose 'Responce received'
+                $remoteStream = $response.GetResponseStream()
+ 
+                $localStream = [System.IO.File]::Create($Path)
+ 
+                $buffer = New-Object System.Byte[] 1024
+                $bytesRead = 0
+ 
+                do
+                {
+                    Write-Verbose '.'
+                    $bytesRead = $remoteStream.Read($buffer, 0, $buffer.Length)
+                    $localStream.Write($buffer, 0, $bytesRead)
+                    $bytesProcessed += $bytesRead
+                        
+                    $percentageCompleted = $bytesProcessed / $response.ContentLength
+                    Write-Progress -Activity "Downloading file '$fileName'" `
+                    -Status ("{0:P} completed, {1:N2}MB of {2:N2}MB" -f $percentageCompleted, ($bytesProcessed / 1MB), ($response.ContentLength / 1MB)) `
+                    -PercentComplete ($percentageCompleted * 100)
+                        
+                } while ($bytesRead -gt 0)
+            }
         }
     }
     catch
     {
         Write-Error -Exception $_.Exception
+    }
+    finally
+    {
+    
+        if ($response) { $response.Close() }
+        if ($remoteStream) { $remoteStream.Close() }
+        if ($localStream) { $localStream.Close() }
+    }
+    
+    $end = Get-Date
+    Write-Verbose "Download has taken: $($end - $start)"
+
+    if ($PassThru)
+    {
+        New-Object PSObject -Property @{
+            Uri = $Uri
+            Path = $Path
+            Length = $response.ContentLength
+        }
     }
 }
 #endregion Get-LabInternetFile
@@ -1737,7 +1757,7 @@ function Get-LabInternetFile
 #region Unblock-LabSources
 function Unblock-LabSources
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     param(
         [string]$Path = $global:labSources
     )
@@ -1795,7 +1815,7 @@ function Unblock-LabSources
 #region Add-FunctionToPSSession
 function Add-FunctionToPSSession
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [CmdletBinding(
             SupportsShouldProcess   = $false,
             ConfirmImpact           = 'None'
@@ -1850,7 +1870,7 @@ function Add-FunctionToPSSession
 #region Add-VariableToPSSession
 function Add-VariableToPSSession
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [CmdletBinding(
             SupportsShouldProcess   = $false,
             ConfirmImpact           = 'None'
@@ -1912,7 +1932,7 @@ function Add-VariableToPSSession
 #region Sync-Parameter
 function Sync-Parameter
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [Cmdletbinding()]
     param (
         [Parameter(Mandatory)]
@@ -1957,7 +1977,7 @@ function Sync-Parameter
 
 function Set-LabVMDescription
 {
-	# .ExternalHelp AutomatedLab.Help.xml
+    # .ExternalHelp AutomatedLab.Help.xml
     [CmdletBinding()]
     param (
         [hashtable]$Hashtable,
@@ -1989,54 +2009,51 @@ function Set-LabVMDescription
 
 function Get-LabSourcesLocationInternal
 {
-param
-(
-	[switch]$Local
-)
-$lab = Get-Lab -ErrorAction SilentlyContinue
-$labDefinition = Get-LabDefinition -ErrorAction SilentlyContinue
+    param
+    (
+        [switch]$Local
+    )
+    $lab = Get-Lab -ErrorAction SilentlyContinue
+    $labDefinition = Get-LabDefinition -ErrorAction SilentlyContinue
 
-$defaultEngine = 'HyperV'
-if($lab)
-{
-	$defaultEngine = $lab.DefaultVirtualizationEngine
-}
-elseif($labDefinition)
-{
-	$defaultEngine = $labDefinition.DefaultVirtualizationEngine
-}
-
-if ($defaultEngine -eq 'HyperV' -or $Local)
-{
-    $hardDrives = (Get-WmiObject -NameSpace Root\CIMv2 -Class Win32_LogicalDisk | Where-Object {$_.DriveType -eq 3}).DeviceID | Sort-Object -Descending
-
-    foreach ($drive in $hardDrives)
+    $defaultEngine = 'HyperV'
+    if ($lab)
     {
-        if (Test-Path -Path "$drive\LabSources")
+        $defaultEngine = $lab.DefaultVirtualizationEngine
+    }
+    elseif ($labDefinition)
+    {
+        $defaultEngine = $labDefinition.DefaultVirtualizationEngine
+    }
+
+    if ($defaultEngine -eq 'HyperV' -or $Local)
+    {
+        $hardDrives = (Get-WmiObject -NameSpace Root\CIMv2 -Class Win32_LogicalDisk | Where-Object {$_.DriveType -eq 3}).DeviceID | Sort-Object -Descending
+
+        foreach ($drive in $hardDrives)
         {
-            "$drive\LabSources"
+            if (Test-Path -Path "$drive\LabSources")
+            {
+                "$drive\LabSources"
+            }
         }
     }
-}
-elseif($defaultEngine -eq 'Azure')
-{
-	try
-	{
-		(Get-LabAzureLabSourcesStorage -ErrorAction Stop).Path
-	}
-	catch
-	{
-		Get-LabSourcesLocationInternal -Local
-	}
-}
-else
-{
-	Get-LabSourcesLocationInternal -Local
-}
+    elseif ($defaultEngine -eq 'Azure')
+    {
+        try
+        {
+            (Get-LabAzureLabSourcesStorage -ErrorAction Stop).Path
+        }
+        catch
+        {
+            Get-LabSourcesLocationInternal -Local
+        }
+    }
+    else
+    {
+        Get-LabSourcesLocationInternal -Local
+    }
 }
 
 Add-Type -TypeDefinition $meshType
-
-New-Alias -Name ral -Value Reset-AutomatedLab -Scope Global -ErrorAction SilentlyContinue
-
 Add-Type -TypeDefinition $gpoType -IgnoreWarnings
